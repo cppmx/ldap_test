@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import subprocess
 import string
@@ -7,12 +8,12 @@ sys.path.insert(0, '.')
 requirements = ['python-ldap', 'flask-wtf', 'flask-sqlalchemy', 'flask-login']
 packages = find_packages(  )
 
-__version__ = string.split('$0.0.0.1 $')[1]
-__date__ = string.join(string.split('$2018/08/09 14:00:00 $')[1:3], ' ')
+__version__ = '0.0.0.1'
+__date__ = '2018/08/09 14:00:00'
 __author__ = 'Carlos Colon <espacio.sideral@gmail.com>'
 __build__ = subprocess.check_output('git describe --tags --always HEAD'.split()).decode().strip()
 
-with open('ldap_test/_version.py', 'w') as f:
+with open('web_app/_version.py', 'w+') as f:
     f.write('''\
 # I will destroy any changes you make to this file.
 # Sincerely,
